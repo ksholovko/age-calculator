@@ -9,15 +9,20 @@ const calculateAge = () => {
     let m2 = 1 + date.getMonth();
     let y2 = date.getFullYear();
     let month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    console.log(m2);
  
     if (d1 === '' || m1 === '' || y1 === '') {
-       document.getElementById('displayAge').innerText = 'Fill out all input fields!';
+        document.getElementById('displayAge').innerText = 'Fill out all input fields!';
         return
-    
+    }
+
+    if (d1 < 1 || d1 > 31 || m1 < 1 || m2 > 12 || y1 > y2 ) {
+        document.getElementById('displayAge').innerText = 'Incorrect date!';
+        return
     }
 
     if (d1 > d2) {
-        d2 = d2 + month[m2 - 1];
+        d2 = d2 + month[m2 - 1]; 
         m2 = m2 - 1;
     }
 
