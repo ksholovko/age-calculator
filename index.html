@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <div class="calculator-form">
+      <h1>Age Calculator</h1>
+      <div class="inputs">
+        <div class="block">
+          <label for="date">Date</label>
+          <input
+            type="number"
+            min="1"
+            max="31"
+            id="date"
+            class="input"
+            placeholder="dd"
+          />
+        </div>
+        <div class="block">
+          <label for="month">Month</label>
+          <input
+            type="number"
+            min="1"
+            max="12"
+            id="month"
+            class="input"
+            placeholder="mm"
+          />
+        </div>
+
+        <div class="block">
+          <label for="year">Year</label>
+          <input
+            type="number"
+            id="year"
+            class="input"
+            placeholder="yyyy"
+            min="1950"
+          />
+        </div>
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn" onclick="calculateAge()">
+          Submit
+        </button>
+        <button class="btn" onclick="removeInputs()">Refresh</button>
+      </div>
+
+      <p id="displayAge"></p>
+    </div>
+    <script src="js/js-age-calculator"></script>
+  </body>
+</html>
